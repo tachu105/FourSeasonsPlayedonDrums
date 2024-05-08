@@ -101,7 +101,6 @@ void loop() {
     }
     delay(50);
     baseTime = millis()/1000;
-    //isReset = 0;
   }
 
   if (sensorState_D2 == HIGH) {     //選択センサ2
@@ -122,7 +121,6 @@ void loop() {
     }
     delay(50);
     baseTime = millis()/1000;
-    //isReset = 0;
   }
 
 
@@ -146,7 +144,6 @@ void loop() {
     }
     delay(50);
     baseTime = millis()/1000;
-    //isReset = 0;
   }
 
   curTime = millis()/1000;
@@ -177,7 +174,6 @@ void loop() {
 
     isReset = 1;
   }
-  //Serial.println(curTime - baseTime);
 }
 
 
