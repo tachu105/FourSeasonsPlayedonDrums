@@ -28,19 +28,12 @@ int changeMovie = 0;
 
 void setup() {
   fullScreen();
-  //size(500,500);
+  
   myMovie1 = new Movie(this, "akiloop2.mp4");
   myMovie2 = new Movie(this, "compoloop2.mp4");
   myMovie3 = new Movie(this, "fuyuloop2.mp4");
   myMovie4 = new Movie(this, "sakuraloop.mp4");
 
-/*
-  //すべてループ再生//
-  myMovie1.loop();
-  myMovie2.loop();
-  myMovie3.loop();
-  myMovie4.loop();
-*/
   //バックグラウンドで再生//
    myMovie1.play();
   myMovie2.play();
@@ -68,66 +61,24 @@ void draw() {
   background(0);
   //特定の入力値の場合，指定の動画でフレームを更新//
   if (changeMovie == 2211) {
-    /*if(M1State==0){
-      myMovie1.play();
-      M1State = 1;
-    }
-    myMovie2.stop();
-    myMovie3.stop();
-    myMovie4.stop();
-    M2State = 0;
-    M3State = 0;
-    M4State = 0;*/
     myMovie1.play();
     myMovie2.stop();
     myMovie3.stop();
     myMovie4.stop();
     image(myMovie1, 30, 230);
   } else if (changeMovie == 1221) {
-    /*if(M2State==0){
-      myMovie2.play();
-      M2State = 1;
-    }
-    myMovie1.stop();
-    myMovie3.stop();
-    myMovie4.stop();
-    M1State = 0;
-    M3State = 0;
-    M4State = 0;*/
     myMovie1.stop();
     myMovie2.play();
     myMovie3.stop();
     myMovie4.stop();
     image(myMovie2, 30, 230);
   } else if (changeMovie == 1121) {
-    /*if(M3State==0){
-      myMovie3.play();
-      M3State = 1;
-    }
-    myMovie1.stop();
-    myMovie2.stop();
-    myMovie4.stop();
-    M1State = 0;
-    M2State = 0;
-    M4State = 0;*/
-    
     myMovie1.stop();
     myMovie2.stop();
     myMovie3.play();
     myMovie4.stop();
-    
     image(myMovie3, 30, 230);
   } else if (changeMovie == 2122) {
-    /*if(M4State==0){
-      myMovie4.play();
-      M4State = 1;
-    }
-    myMovie1.stop();
-    myMovie3.stop();
-    myMovie2.stop();
-    M1State = 0;
-    M3State = 0;
-    M2State = 0;*/
     myMovie1.stop();
     myMovie4.play();
     myMovie3.stop();
@@ -135,16 +86,6 @@ void draw() {
     image(myMovie4, 30, 230);
   }
   else if (changeMovie == 21111) {
-    /*if(M4State==0){
-      myMovie4.play();
-      M4State = 1;
-    }
-    myMovie1.stop();
-    myMovie3.stop();
-    myMovie2.stop();
-    M1State = 0;
-    M3State = 0;
-    M2State = 0;*/
     myMovie1.stop();
     myMovie4.stop();
     myMovie3.stop();
